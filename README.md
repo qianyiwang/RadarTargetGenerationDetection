@@ -3,10 +3,10 @@
 Udacity sensor fusion project
 
 ## Project Layout:
-< img src="img/Layout.jpg">
+< img src="img\Layout.jpg">
 
 ## Radar System Requirements:
-< img src="img/SensorRequirement.jpg">
+< img src="img\SensorRequirement.jpg">
 
 ## Rubric Points
 ### FMCW Waveform Design
@@ -78,7 +78,7 @@ sig_fft1 = abs(sig_fft1);
 % Hence we throw out half of the samples.
 single_side_sig_fft1 = sig_fft1(1:Nr/2);
 ```
-< img src="img/1st_fft.jpg">
+< img src="img\1st_fft.jpg">
 
 ### Doppler FFT (2nd FFT)
 ```
@@ -96,7 +96,7 @@ doppler_axis = linspace(-100,100,Nd);
 range_axis = linspace(-200,200,Nr/2)*((Nr/2)/400);
 figure('Name','Range from Second FFT'),surf(doppler_axis,range_axis,RDM);
 ```
-< img src="img/2nd_fft.jpg">
+< img src="img\2nd_fft.jpg">
 
 ### 2D CFAR
 Implement the 2D CFAR process on the output of 2D FFT operation. 
@@ -145,4 +145,4 @@ for i = Tr+Gr+1:(Nr/2)-(Gr+Tr)
     end
 end
 ```
-< img src="img/cfar_filter.jpg">
+< img src="img\cfar_filter.jpg">
